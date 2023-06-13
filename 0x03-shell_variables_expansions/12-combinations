@@ -1,2 +1,2 @@
 #!/bin/bash
-eval "$(echo {a..n}{a..z} {p..z}{a..z} | sed 's/oo//g' | awk '{for(i=1;i<=NF;i++) print $i}' | sort)"
+echo {a..n}{a..z} {p..z}{a..z} | tr ' ' '\n' | grep -v 'oo'
